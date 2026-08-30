@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Navbar from './Navbar';
-import {motion} from 'motion/react'
+import { motion } from 'motion/react'
 
 const Home = () => {
     const navigate = useNavigate();
@@ -17,15 +17,15 @@ const Home = () => {
                     {/* <!-- left --> */}
                     <div className="h-full flex flex-col justify-center order-2 md:order-1">
                         <motion.h1
-                        variants={container} initial="hidden" animate="visible" transition={{ duration: 0.5 }}
-                        className="text-3xl sm:text-4xl md:text-5xl mt-0 md:mt-0 mb-6 md:mb-10">Agentic Tutor</motion.h1>
+                            variants={container} initial="hidden" animate="visible" transition={{ duration: 0.5 }}
+                            className="text-3xl sm:text-4xl md:text-5xl mt-0 md:mt-0 mb-6 md:mb-10">Agentic Tutor</motion.h1>
                         <motion.p
-                        variants={container} initial="hidden" animate="visible" transition={{ duration: 1 }}
-                        className="text-sm sm:text-base">Our interactive e-learning platform transforms complex Data Structures and Algorithms problems into fun, bite-sized visual challenges. Guided by an interactive cartoon avatar who coaches, motivates, and adapts to your unique learning paces.
+                            variants={container} initial="hidden" animate="visible" transition={{ duration: 1 }}
+                            className="text-sm sm:text-base">Our interactive e-learning platform transforms complex Data Structures and Algorithms problems into fun, bite-sized visual challenges. Guided by an interactive cartoon avatar who coaches, motivates, and adapts to your unique learning paces.
                         </motion.p>
                         <motion.div
-                        variants={container} initial="hidden" animate="visible" transition={{ duration: 1 }}
-                        className="flex flex-wrap gap-4 md:gap-0">
+                            variants={container} initial="hidden" animate="visible" transition={{ duration: 1 }}
+                            className="flex flex-wrap gap-4 md:gap-0">
                             <Link
                                 to="/op"
                                 className="whitespace-nowrap px-4 py-2 rounded-lg text-lg font-medium transition-all duration-200 border bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200 hover:bg-slate-850 my-8">Get Started
