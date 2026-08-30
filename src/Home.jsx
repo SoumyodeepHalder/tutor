@@ -21,7 +21,7 @@ const Home = () => {
                             className="text-3xl sm:text-4xl md:text-5xl mt-0 md:mt-0 mb-6 md:mb-10">Agentic Tutor</motion.h1>
                         <motion.p
                             variants={container} initial="hidden" animate="visible" transition={{ duration: 1 }}
-                            className="text-sm sm:text-base">Our interactive e-learning platform transforms complex Data Structures and Algorithms problems into fun, bite-sized visual challenges. Guided by an interactive cartoon avatar who coaches, motivates, and adapts to your unique learning paces.
+                            className="text-sm sm:text-base"><span className='text-red-500'>Master Dsa with 150 Questions</span> Covering All Patterns. Our interactive e-learning platform transforms complex Data Structures and Algorithms problems into fun, bite-sized visual challenges. Guided by an interactive cartoon avatar who coaches, motivates, and adapts to your unique learning paces.
                         </motion.p>
                         <motion.div
                             variants={container} initial="hidden" animate="visible" transition={{ duration: 1 }}
