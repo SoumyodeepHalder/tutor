@@ -27,13 +27,6 @@ const Navbar = () => {
                         >
                             About Us
                         </motion.button>
-                        <motion.button className="text-sm font-medium hover:bg-slate-800 text-slate-200 px-4 py-2 rounded-lg border border-slate-900/50 hover:border-slate-700 transition-all duration-200 shadow-sm"
-                        initial={{ opacity: 0, y: 5 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: .5 }}
-                        >
-                            Contact
-                        </motion.button>
                     </div>
             </div>
         </header>

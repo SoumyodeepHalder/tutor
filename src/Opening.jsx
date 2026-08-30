@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {useNavigate} from 'react-router-dom'
+import { motion } from 'motion/react'
 
 // Note: For a fully authentic look, we use inline SVG paths to recreate the unique 
 // hand-drawn, thick blue portal waves flowing across the dark background.
@@ -8,6 +9,14 @@ export default function PortalSmashMenu() {
   const menuOptions = ['RESUME', 'ABOUT', 'SETTINGS', 'EXIT'];
 
   const navigate = useNavigate();
+  const container ={
+    hidden:{opacity:0, y:10},
+    visible:{opacity:1, y:0, transition:{staggerChildren: 0.15}}
+  }
+  const item ={
+    hidden:{opacity:0, y:10},
+    visible:{opacity:1, y:0}
+  }
 
   // Handle keyboard navigation (Arrow keys / Tab)
   useEffect(() => {
@@ -50,10 +59,13 @@ export default function PortalSmashMenu() {
           TUTOR.AI
         </h1>
         {/* Menu Navigation List */}
-        <div className="flex flex-col space-y-6 md:space-y-8 my-auto">
+        <motion.div
+        variants={container} initial="hidden" animate="visible"
+        className="flex flex-col space-y-6 md:space-y-8 my-auto">
           {menuOptions.map((option, index) => (
-            <button
+            <motion.button
               key={option}
+              variants={item}
               onClick={() => {
                 if(option==='RESUME')navigate('/lvl');
                 else if(option==='ABOUT')navigate('/');
@@ -68,9 +80,9 @@ export default function PortalSmashMenu() {
               }`}
             >
               {option}
-            </button>
+            </motion.button>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Navigation Help Footer Text */}
